@@ -29,7 +29,7 @@ namespace AWT_Practial_Three
         {
             try
             {
-                cmd = new SqlCommand("SELECT * FROM customer_info", conn);
+                cmd = new SqlCommand("SELECT * FROM ProductDetails", conn);
 
                 if (conn.State == ConnectionState.Closed)
                 {
@@ -62,7 +62,7 @@ namespace AWT_Practial_Three
             {
                 if (TxtCId.Text != "" && TxtCName.Text != "" && TxtCAddress.Text != "")
                 {
-                    cmd = new SqlCommand("INSERT INTO customer_info(cid,cname,cadd)VALUES(@cid, @cname, @cadd)", conn);
+                    cmd = new SqlCommand("INSERT INTO ProductDetails(pid,pname,pcost)VALUES(@cid, @cname, @cadd)", conn);
                     if (conn.State == ConnectionState.Closed)
                     {
                         conn.Open();
@@ -102,7 +102,7 @@ namespace AWT_Practial_Three
             {
                 if (TxtCId.Text != "" && Convert.ToUInt16(TxtCId.Text) > 0)
                 {
-                    cmd = new SqlCommand("DELETE customer_info WHERE cid=@cid", conn);
+                    cmd = new SqlCommand("DELETE ProductDetails WHERE pid=@cid", conn);
                     if (conn.State == ConnectionState.Closed)
                     { conn.Open(); }
                     cmd.Parameters.AddWithValue("@cid", TxtCId.Text);
@@ -118,7 +118,7 @@ namespace AWT_Practial_Three
                 }
                 else
                 {
-                    MsgLabel.Text = "Please enter correct Customer Id";
+                    MsgLabel.Text = "Please enter correct Product Id";
                 }
             }
             catch (Exception ex)
@@ -138,7 +138,7 @@ namespace AWT_Practial_Three
             {
                 if (TxtCId.Text != "" && TxtCName.Text != "" && TxtCAddress.Text != "")
                 {
-                    cmd = new SqlCommand("UPDATE customer_info SET cname=@cname,cadd=@cadd WHERE cid = @cid", conn);
+                    cmd = new SqlCommand("UPDATE ProductDetails SET pname=@cname,pcost=@cadd WHERE pid = @cid", conn);
                     if (conn.State == ConnectionState.Closed)
                     {
                         conn.Open();
@@ -177,7 +177,7 @@ namespace AWT_Practial_Three
         {
             try
             {
-                cmd = new SqlCommand("SELECT * FROM customer_info WHERE cid = @cid", conn);
+                cmd = new SqlCommand("SELECT * FROM ProductDetails WHERE pid = @cid", conn);
 
                 if (conn.State == ConnectionState.Closed)
                 {
@@ -189,9 +189,9 @@ namespace AWT_Practial_Three
                 {
                     MsgLabel.Text = "Record Found Successfully!";
                     clearTextBox();
-                    TxtCId.Text = dr["cid"].ToString();
-                    TxtCName.Text = dr["cname"].ToString();
-                    TxtCAddress.Text = dr["cadd"].ToString();
+                    TxtCId.Text = dr["pid"].ToString();
+                    TxtCName.Text = dr["pname"].ToString();
+                    TxtCAddress.Text = dr["pcost"].ToString();
                 }
                 else
                 {

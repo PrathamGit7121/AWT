@@ -7,16 +7,24 @@
     <title></title>
 </head>
 <body>
-            <h1>Client Side Session Management using Hiddent Fields</h1>
     <form id="form1" runat="server">
         <div>
-            <asp:HiddenField ID="hidFieldCount" runat="server" OnValueChanged="Page_Load" Value="1" />
-            <br />
-            <asp:Button ID="btnVisitAgain_Click" runat="server" Text="Button" OnClick="btnVisitAgain_Click_Click" PostBackUrl="~/Practical4_Q1.aspx" />
+            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Server side Session Management using Session state"></asp:Label>
             <br />
             <br />
-            <asp:Label ID="lblVisitAgain" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="First Name"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtFname" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="Last Name"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtLname" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Button ID="Button1" runat="server" Text="Set Session state" OnClick="Button1_Click" />
         </div>
     </form>
 </body>
 </html>
+

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="num1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="num2" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="num1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="num2" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubNumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MulNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="num1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="num2" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MulNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MulNumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DivNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="num1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="num2" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DivNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DivNumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddNumSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNum" />
+  </wsdl:message>
+  <wsdl:message name="AddNumSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubNumSoapIn">
+    <wsdl:part name="parameters" element="tns:SubNum" />
+  </wsdl:message>
+  <wsdl:message name="SubNumSoapOut">
+    <wsdl:part name="parameters" element="tns:SubNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="MulNumSoapIn">
+    <wsdl:part name="parameters" element="tns:MulNum" />
+  </wsdl:message>
+  <wsdl:message name="MulNumSoapOut">
+    <wsdl:part name="parameters" element="tns:MulNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="DivNumSoapIn">
+    <wsdl:part name="parameters" element="tns:DivNum" />
+  </wsdl:message>
+  <wsdl:message name="DivNumSoapOut">
+    <wsdl:part name="parameters" element="tns:DivNumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CalculatorWebServicesSoap">
+    <wsdl:operation name="AddNum">
+      <wsdl:input message="tns:AddNumSoapIn" />
+      <wsdl:output message="tns:AddNumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubNum">
+      <wsdl:input message="tns:SubNumSoapIn" />
+      <wsdl:output message="tns:SubNumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MulNum">
+      <wsdl:input message="tns:MulNumSoapIn" />
+      <wsdl:output message="tns:MulNumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DivNum">
+      <wsdl:input message="tns:DivNumSoapIn" />
+      <wsdl:output message="tns:DivNumSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculatorWebServicesSoap" type="tns:CalculatorWebServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddNum">
+      <soap:operation soapAction="http://tempuri.org/AddNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubNum">
+      <soap:operation soapAction="http://tempuri.org/SubNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MulNum">
+      <soap:operation soapAction="http://tempuri.org/MulNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DivNum">
+      <soap:operation soapAction="http://tempuri.org/DivNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalculatorWebServicesSoap12" type="tns:CalculatorWebServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddNum">
+      <soap12:operation soapAction="http://tempuri.org/AddNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubNum">
+      <soap12:operation soapAction="http://tempuri.org/SubNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MulNum">
+      <soap12:operation soapAction="http://tempuri.org/MulNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DivNum">
+      <soap12:operation soapAction="http://tempuri.org/DivNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculatorWebServices">
+    <wsdl:port name="CalculatorWebServicesSoap" binding="tns:CalculatorWebServicesSoap">
+      <soap:address location="https://localhost:44361/CalculatorWebServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CalculatorWebServicesSoap12" binding="tns:CalculatorWebServicesSoap12">
+      <soap12:address location="https://localhost:44361/CalculatorWebServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

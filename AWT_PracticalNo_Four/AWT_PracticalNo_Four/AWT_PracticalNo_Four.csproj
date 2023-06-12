@@ -72,6 +72,7 @@
     <Content Include="CacheDemo02.aspx" />
     <Content Include="Digiclock_Ajax.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="GridViewUsingAjax.aspx" />
     <Content Include="HtmlPage1.html" />
     <Content Include="http_Context_Demo.aspx" />
     <Content Include="img\FAMT1.jpg" />
@@ -118,6 +119,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewUsingAjax.aspx.cs">
+      <DependentUpon>GridViewUsingAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewUsingAjax.aspx.designer.cs">
+      <DependentUpon>GridViewUsingAjax.aspx</DependentUpon>
     </Compile>
     <Compile Include="http_Context_Demo.aspx.cs">
       <DependentUpon>http_Context_Demo.aspx</DependentUpon>

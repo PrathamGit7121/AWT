@@ -30,9 +30,9 @@ namespace AWT_Practial_Three
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void Insertemp_info(emp_info instance);
-    partial void Updateemp_info(emp_info instance);
-    partial void Deleteemp_info(emp_info instance);
+    partial void Insertemp_info1(emp_info1 instance);
+    partial void Updateemp_info1(emp_info1 instance);
+    partial void Deleteemp_info1(emp_info1 instance);
     #endregion
 		
 		public emp_infoLINQDataContextDataContext(string connection) : 
@@ -59,17 +59,17 @@ namespace AWT_Practial_Three
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<emp_info> emp_infos
+		public System.Data.Linq.Table<emp_info1> emp_info1s
 		{
 			get
 			{
-				return this.GetTable<emp_info>();
+				return this.GetTable<emp_info1>();
 			}
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.emp_info")]
-	public partial class emp_info : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class emp_info1 : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -96,7 +96,7 @@ namespace AWT_Practial_Three
     partial void OnsalaryChanged();
     #endregion
 		
-		public emp_info()
+		public emp_info1()
 		{
 			OnCreated();
 		}

@@ -24,13 +24,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TxtESalary" runat="server"></asp:TextBox>
             <br />
             <br />
+            <asp:TextBox ID="TxtSearch" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp; <asp:Button ID="btnSearchSP" runat="server" Text="Search using Stored Procedure" Width="204px" OnClick="btnSearchSP_Click" />
+            <br />
+            <br />
             <asp:GridView ID="gvEmployeeDetails" runat="server">
             </asp:GridView>
             <br />
-&nbsp;<asp:TextBox ID="TxtSearch" runat="server"></asp:TextBox>
-&nbsp;&nbsp; <asp:Button ID="btnSearchSP" runat="server" Text="Search using Stored Procedure" Width="265px" OnClick="btnSearchSP_Click" />
-            &nbsp;
             <asp:Button ID="btnAddSP" runat="server" Text="Add Using Stored Procedure" Width="268px" OnClick="btnAddSP_Click" />
+            <br />
             <br />
             <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
         </div>

@@ -40,12 +40,12 @@ namespace AWT_Practial_Three
         {
             try
             {
-                emp_info objAdd = new emp_info();
+                emp_info1 objAdd = new emp_info1();
                 objAdd.eid = Convert.ToInt16(txtEid.Text);
                 objAdd.ename = Convert.ToString(txtName.Text);
                 objAdd.designation = Convert.ToString(txtDesg.Text);
                 objAdd.salary = Convert.ToString(txtSalary.Text);
-                emp_dc.emp_infos.InsertOnSubmit(objAdd);
+                emp_dc.emp_info1s.InsertOnSubmit(objAdd);
                 emp_dc.SubmitChanges();
                 clearTextBox();
             }
@@ -62,8 +62,8 @@ namespace AWT_Practial_Three
         {
             try
             {
-                emp_info objDel = emp_dc.emp_infos.Single(emp_info => emp_info.eid == Convert.ToInt16(txtEid.Text));
-                emp_dc.emp_infos.DeleteOnSubmit(objDel);
+                emp_info1 objDel = emp_dc.emp_info1s.Single(emp_info => emp_info.eid == Convert.ToInt16(txtEid.Text));
+                emp_dc.emp_info1s.DeleteOnSubmit(objDel);
                 emp_dc.SubmitChanges();
                 clearTextBox();
             }
@@ -80,7 +80,7 @@ namespace AWT_Practial_Three
         {
             try
             {
-                emp_info objUpdate = emp_dc.emp_infos.Single(emp_info => emp_info.eid == Convert.ToInt16(txtEid.Text));
+                emp_info1 objUpdate = emp_dc.emp_info1s.Single(emp_info => emp_info.eid == Convert.ToInt16(txtEid.Text));
                 objUpdate.ename = Convert.ToString(txtName.Text);
                 objUpdate.designation = Convert.ToString(txtDesg.Text);
                 objUpdate.salary = Convert.ToString(txtSalary.Text);
@@ -100,7 +100,7 @@ namespace AWT_Practial_Three
         {
             try
             {
-                emp_info objSearch = emp_dc.emp_infos.Single(emp_info => emp_info.eid == Convert.ToInt16(txtEid.Text));
+                emp_info1 objSearch = emp_dc.emp_info1s.Single(emp_info => emp_info.eid == Convert.ToInt16(txtEid.Text));
                 txtEid.Text = Convert.ToString(objSearch.eid);
                 txtName.Text = objSearch.ename;
                 txtDesg.Text = objSearch.designation;

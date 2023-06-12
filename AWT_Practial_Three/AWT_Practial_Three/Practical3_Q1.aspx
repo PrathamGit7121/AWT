@@ -9,16 +9,16 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <br />
-            <asp:Label ID="Label1" runat="server" Text="Enter Customer ID"></asp:Label>
+            <h3>Database access using Entity Framework</h3>
+            <asp:Label ID="Label1" runat="server" Text="Product Id"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TxtCId" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Label2" runat="server" Text="Enter Customer Name"></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="Product Name"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TxtCName" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Label3" runat="server" Text="Enter Customer Address"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Text="Product Cost"></asp:Label>
 &nbsp;<asp:TextBox ID="TxtCAddress" runat="server"></asp:TextBox>
             <br />
             <br />
@@ -31,6 +31,8 @@
             <asp:GridView ID="gvCustomerDetails" runat="server">
             </asp:GridView>
             <br />
+            <asp:Label ID="MsgLabel" runat="server" Text=""></asp:Label>
+        &nbsp;<br />
             <br />
             <asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" />
         &nbsp;
@@ -39,8 +41,7 @@
             <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
 &nbsp;
             <br />
-            <asp:Label ID="MsgLabel" runat="server" Text=""></asp:Label>
-        &nbsp;</div>
+        </div>
     </form>
 </body>
 </html>

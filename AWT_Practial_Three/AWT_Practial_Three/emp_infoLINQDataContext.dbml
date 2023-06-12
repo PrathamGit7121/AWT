@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="customer_info " Class="emp_infoLINQDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Table Name="dbo.emp_info" Member="emp_infos">
-    <Type Name="emp_info">
+  <Table Name="dbo.emp_info" Member="emp_info1s">
+    <Type Name="emp_info1">
       <Column Name="eid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ename" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="designation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />

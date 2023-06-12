@@ -11,22 +11,14 @@ namespace AWT_PracticalNo_Four
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblVisitAgain.Text = string.Format("Clicked {0} times!", hidFieldCount.Value);
-        }
 
-        protected void btnVisitAgain_Click_Click(object sender, EventArgs e)
+        }
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            if (IsPostBack)
-            {
-                if(hidFieldCount.Value == null)
-                {
-                    hidFieldCount.Value = 1.ToString();
-                }
-                else
-                {
-                    hidFieldCount.Value = (Convert.ToInt32(hidFieldCount.Value) + 1).ToString();
-                }
-            }
+                Session["FirstName"] = txtFname.Text;
+                Session["LastName"] = txtLname.Text;
+
+                Response.Redirect("InProcSession2.aspx");
         }
     }
 }

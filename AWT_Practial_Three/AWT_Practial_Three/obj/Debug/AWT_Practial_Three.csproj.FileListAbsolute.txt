@@ -57,3 +57,7 @@ I:\SEM-II\AWT_Practical\Programs\AWT_Practial_Three\AWT_Practial_Three\obj\Debug
 I:\SEM-II\AWT_Practical\Programs\AWT_Practial_Three\AWT_Practial_Three\obj\Debug\AWT_Practial_Three.csproj.CopyComplete
 I:\SEM-II\AWT_Practical\Programs\AWT_Practial_Three\AWT_Practial_Three\obj\Debug\AWT_Practial_Three.dll
 I:\SEM-II\AWT_Practical\Programs\AWT_Practial_Three\AWT_Practial_Three\obj\Debug\AWT_Practial_Three.pdb
+I:\SEM-II\AWT_Practical\Programs\AWT_Practial_Three\AWT_Practial_Three\bin\EntityFramework.dll
+I:\SEM-II\AWT_Practical\Programs\AWT_Practial_Three\AWT_Practial_Three\bin\EntityFramework.SqlServer.dll
+I:\SEM-II\AWT_Practical\Programs\AWT_Practial_Three\AWT_Practial_Three\bin\EntityFramework.xml
+I:\SEM-II\AWT_Practical\Programs\AWT_Practial_Three\AWT_Practial_Three\bin\EntityFramework.SqlServer.xml

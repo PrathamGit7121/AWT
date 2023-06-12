@@ -117,8 +117,8 @@ namespace AWT_Practial_Three
                     cmd.CommandText = "insertEmp";
                     cmd.Parameters.Add(new SqlParameter("@eid", SqlDbType.SmallInt)).Value = Convert.ToInt16(TxtEid.Text);
                     cmd.Parameters.Add(new SqlParameter("@ename", SqlDbType.VarChar)).Value = TxtEName.Text;
-                    cmd.Parameters.Add(new SqlParameter("@edesignation", SqlDbType.VarChar)).Value = TxtEDesignation.Text;
-                    cmd.Parameters.Add(new SqlParameter("@esalary", SqlDbType.VarChar)).Value = TxtESalary.Text;
+                    cmd.Parameters.Add(new SqlParameter("@designation", SqlDbType.VarChar)).Value = TxtEDesignation.Text;
+                    cmd.Parameters.Add(new SqlParameter("@salary", SqlDbType.VarChar)).Value = TxtESalary.Text;
                     int r = cmd.ExecuteNonQuery();
                     if (r != 0)
                     {

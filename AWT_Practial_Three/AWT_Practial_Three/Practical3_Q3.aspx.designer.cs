@@ -96,15 +96,6 @@ namespace AWT_Practial_Three
         protected global::System.Web.UI.WebControls.TextBox TxtESalary;
 
         /// <summary>
-        /// gvEmployeeDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvEmployeeDetails;
-
-        /// <summary>
         /// TxtSearch control.
         /// </summary>
         /// <remarks>
@@ -121,6 +112,15 @@ namespace AWT_Practial_Three
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearchSP;
+
+        /// <summary>
+        /// gvEmployeeDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvEmployeeDetails;
 
         /// <summary>
         /// btnAddSP control.

@@ -43,8 +43,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -73,6 +81,17 @@
       <DependentUpon>customer_info .mdf</DependentUpon>
     </Content>
     <Content Include="Dummy.aspx" />
+    <Content Include="Practical3_8_1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProductEntity.edmx</DependentUpon>
+      <LastGenOutput>Practical3_8_1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Practical3_8_1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProductEntity.edmx</DependentUpon>
+      <LastGenOutput>Practical3_8_1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Practical3_8_2.aspx" />
     <Content Include="Practical3_Q1.aspx" />
     <Content Include="Practical3_Q2.aspx" />
     <Content Include="Practical3_Q3.aspx" />
@@ -83,12 +102,18 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="customer_info.cs">
+      <DependentUpon>Practical3_8_1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Dummy.aspx.cs">
       <DependentUpon>Dummy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Dummy.aspx.designer.cs">
       <DependentUpon>Dummy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="emp_info.cs">
+      <DependentUpon>Practical3_8_1.tt</DependentUpon>
     </Compile>
     <Compile Include="emp_infoLINQDataContext.cs">
       <DependentUpon>emp_infoLINQDataContext.dbml</DependentUpon>
@@ -97,6 +122,28 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>emp_infoLINQDataContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Practical3_8_1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Practical3_8_1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Practical3_8_1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Practical3_8_1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductEntity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Practical3_8_2.aspx.cs">
+      <DependentUpon>Practical3_8_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Practical3_8_2.aspx.designer.cs">
+      <DependentUpon>Practical3_8_2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Practical3_Q1.aspx.cs">
       <DependentUpon>Practical3_Q1.aspx</DependentUpon>
@@ -147,6 +194,9 @@
     <Compile Include="Practical3_Q7.aspx.designer.cs">
       <DependentUpon>Practical3_Q7.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProductDetail.cs">
+      <DependentUpon>Practical3_8_1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +209,13 @@
       <DependentUpon>emp_infoLINQDataContext.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="ProductEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProductEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ProductEntity.edmx.diagram">
+      <DependentUpon>ProductEntity.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -168,6 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,3 @@
+H:\AWT\Nodejs_First_Prject\Nodejs_First_Prject\obj\Debug\Nodejs_First_Prject.njsproj.AssemblyReference.cache
+H:\AWT\Nodejs_First_Prject\Nodejs_First_Prject\obj\Debug\Nodejs_First_Prject.njsproj.CoreCompileInputs.cache
+H:\AWT\Nodejs_First_Prject\Nodejs_First_Prject\bin\Microsoft.NodejsTools.WebRole.dll

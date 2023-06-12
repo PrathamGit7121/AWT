@@ -21,6 +21,7 @@
             <asp:Label ID="Label1" runat="server" Text="Salary :"></asp:Label>
             <asp:TextBox ID="txtSalary" runat="server"></asp:TextBox>
             <br />
+            <br />
         <asp:GridView ID="gridEmployee" runat="server">
         </asp:GridView>
         <br />
